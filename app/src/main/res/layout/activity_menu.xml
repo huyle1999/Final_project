@@ -85,7 +85,7 @@
             >
 
             <GridView
-                android:id="@+id/simpleGridView"
+                android:id="@+id/GridView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fastScrollEnabled="false"
@@ -100,7 +100,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageButton
+        <Button
             android:id="@+id/next_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
