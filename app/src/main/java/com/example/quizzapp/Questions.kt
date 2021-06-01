@@ -118,22 +118,6 @@ class Questions : AppCompatActivity() {
                 isFailed--
             }
 
-            if(questionNr == allJoined[0].questions.count() -1 && questionNum === 10){
-                quizlayout.visibility = View.GONE;
-                donelayout.visibility= View.VISIBLE
-
-                val info: DoneFeed = DoneFeed(
-                    qNumbers = "${allJoined[0].questions.count()}",
-                    qCorrectAnswers = "${isCorrect}",
-                    qAttempted = "${10}",
-                    qNegative = "${abs(isFailed)}"
-                )
-
-                donepop.adapter = DoneAdapter(this, info)
-            }else{
-                questionNum++;
-                questionNr++
-            }
 
             totalnum.text = "${questionNum.toString()}/${allJoined[0].questions.count()}"
             mainquestion.text = allJoined[0].questions[questionNr];
