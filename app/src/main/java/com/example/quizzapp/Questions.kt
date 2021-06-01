@@ -105,27 +105,27 @@ class Questions : AppCompatActivity() {
         var qanswers: ArrayList<String> = allJoined[0].answer[questionNr];
         setAnswers(qanswers)
 
-        answerListView.setOnItemClickListener { parent, view, position, id ->
-            val clickedID = id.toInt()
-            val correctanswer = allJoined[0].correct_answer[questionNr]
-            val selectedanswer = allJoined[0].answer[questionNr][clickedID]
-            val answerIsCorrect = selectedanswer == correctanswer;
-
-            // Check if answer is correct
-            if (answerIsCorrect) {
-                isCorrect++
-            } else {
-                isFailed--
-            }
-
-
-            totalnum.text = "${questionNum.toString()}/${allJoined[0].questions.count()}"
-            mainquestion.text = allJoined[0].questions[questionNr];
-
-            //update answers
-            val newAnswers = allJoined[0].answer[questionNr];
-            setAnswers(newAnswers)
-        }
+//        answerListView.setOnItemClickListener { parent, view, position, id ->
+//            val clickedID = id.toInt()
+//            val correctanswer = allJoined[0].correct_answer[questionNr]
+//            val selectedanswer = allJoined[0].answer[questionNr][clickedID]
+//            val answerIsCorrect = selectedanswer == correctanswer;
+//
+//            // Check if answer is correct
+//            if (answerIsCorrect) {
+//                isCorrect++
+//            } else {
+//                isFailed--
+//            }
+//
+//
+//            totalnum.text = "${questionNum.toString()}/${allJoined[0].questions.count()}"
+//            mainquestion.text = allJoined[0].questions[questionNr];
+//
+//            //update answers
+//            val newAnswers = allJoined[0].answer[questionNr];
+//            setAnswers(newAnswers)
+//        }
     }
 
     private fun setAnswers(qanswers: ArrayList<String>) {
