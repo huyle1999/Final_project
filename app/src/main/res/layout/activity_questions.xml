@@ -14,7 +14,7 @@
         android:elevation="2dp"
         android:paddingHorizontal="21dp"
         android:paddingVertical="23dp"
-    >
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/top"
@@ -29,7 +29,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/backward_arrow"
-            />
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -48,7 +48,7 @@
                 android:textColor="#2D333C" android:textSize="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-            />
+                />
 
             <TextView
                 android:id="@+id/total_num"
@@ -68,7 +68,7 @@
             android:layout_marginTop="56dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/info"
-        >
+            >
             <LinearLayout
                 android:id="@+id/main_question_container"
                 android:layout_width="match_parent"
@@ -81,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="3.8"
-                >
+                    >
                     <TextView
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
                     android:id="@+id/child_two"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                >
+                    >
                     <TextView
                         android:id="@+id/main_question"
                         android:layout_width="wrap_content"
@@ -124,7 +124,7 @@ km/hrcan cross in 30 seconds, is:"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/question_container"
-        />
+            />
 
         <ImageButton
             android:id="@+id/next_btn"
@@ -144,7 +144,7 @@ km/hrcan cross in 30 seconds, is:"
         android:background="@drawable/okay"
         android:elevation="0dp"
         android:paddingHorizontal="12dp"
-    >
+        >
         <ListView
             android:id="@+id/done_pop"
             android:layout_width="0dp"
@@ -158,7 +158,7 @@ km/hrcan cross in 30 seconds, is:"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-        />
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
