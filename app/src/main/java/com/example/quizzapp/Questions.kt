@@ -16,7 +16,7 @@ import kotlin.Result.*
 class Questions : AppCompatActivity() {
 
     companion object{
-        val allJoined: ArrayList<JoinedFeed> = ArrayList();
+        val allJoined: ArrayList<JoinedFeed> = ArrayList();//what is this ?
         var selectedAnswer: ArrayList<String> = ArrayList();
         var questionNr: Int = 0;
         var isCorrect: Int = 0;
@@ -105,27 +105,44 @@ class Questions : AppCompatActivity() {
         var qanswers: ArrayList<String> = allJoined[0].answer[questionNr];
         setAnswers(qanswers)
 
-//        answerListView.setOnItemClickListener { parent, view, position, id ->
-//            val clickedID = id.toInt()
-//            val correctanswer = allJoined[0].correct_answer[questionNr]
-//            val selectedanswer = allJoined[0].answer[questionNr][clickedID]
-//            val answerIsCorrect = selectedanswer == correctanswer;
-//
-//            // Check if answer is correct
-//            if (answerIsCorrect) {
-//                isCorrect++
-//            } else {
-//                isFailed--
-//            }
-//
-//
-//            totalnum.text = "${questionNum.toString()}/${allJoined[0].questions.count()}"
-//            mainquestion.text = allJoined[0].questions[questionNr];
-//
-//            //update answers
-//            val newAnswers = allJoined[0].answer[questionNr];
-//            setAnswers(newAnswers)
-//        }
+        answerListView.setOnItemClickListener { parent, view, position, id ->
+            val clickedID = id.toInt()
+            val correctanswer = allJoined[0].correct_answer[questionNr]
+            val selectedanswer = allJoined[0].answer[questionNr][clickedID]
+            val answerIsCorrect = selectedanswer == correctanswer;
+
+            // Check if answer is correct
+            if (answerIsCorrect) {
+                isCorrect++
+            } else {
+                isFailed--
+            }
+            if(questionNr == allJoined[0].questions.count() -1 && questionNum === 10){
+                quizlayout.visibility = View.GONE;
+                donelayout.visibility= View.VISIBLE
+                //when we reach to the last question,we should stop moving to next because it can crash
+                val info: DoneFeed = DoneFeed(
+                        qNumbers = "${allJoined[0].questions.count()}",
+                        qCorrectAnswers = "${isCorrect}",//5 or 6
+                        qAttempted = "${10}",//question dont skip
+                        qNegative = "${abs(isFailed)}"//the number of wrong
+                )
+
+                donepop.adapter = DoneAdapter(this, info)//update the value
+            }else{
+                questionNum++;
+                questionNr++
+            }
+
+
+
+            totalnum.text = "${questionNum.toString()}/${allJoined[0].questions.count()}"
+            mainquestion.text = allJoined[0].questions[questionNr];
+
+            //update answers
+            val newAnswers = allJoined[0].answer[questionNr];
+            setAnswers(newAnswers)
+        }
     }
 
     private fun setAnswers(qanswers: ArrayList<String>) {
