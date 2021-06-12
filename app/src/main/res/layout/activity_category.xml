@@ -6,6 +6,7 @@
     android:id="@+id/body"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/CatePage"
     tools:context=".Category">
 
     <ImageView
@@ -59,45 +60,42 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="140dp"
         android:src="@drawable/group_355"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textCover"
-        />
+        app:layout_constraintTop_toBottomOf="@id/textCover" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
         android:src="@drawable/group_357"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView5"
-        />
+        app:layout_constraintTop_toBottomOf="@id/imageView5" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="28dp"
         android:src="@drawable/group_356"
         app:layout_constraintEnd_toStartOf="@id/imageView6"
-        app:layout_constraintTop_toBottomOf="@id/imageView5"
-        />
+        app:layout_constraintTop_toBottomOf="@id/imageView5" />
 
     <ImageButton
         android:id="@+id/startBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:src="@drawable/group_3571"
+        android:layout_width="295dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/borderbtn"
+        android:src="@drawable/StartBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
