@@ -4,46 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/WelcomePage"
     android:paddingHorizontal="22dp"
     android:paddingVertical="44dp"
     tools:context=".MainActivity">
 
-
-    <ImageView
-        android:id="@+id/apptifier"
-        android:layout_width="265dp"
-        android:layout_height="258dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="52dp"
-        android:src="@drawable/Logo"
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansbold"
+        android:gravity="center"
+        android:text="WELCOME TO"
+        android:textColor="#006793"
+        android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/apptifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensansbold"
+        android:gravity="center"
+        android:text="KHTN"
+        android:textColor="#1CC4B8"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="@id/welcome"
+        app:layout_constraintStart_toStartOf="@id/welcome"
+        app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/group_340"
+        app:layout_constraintEnd_toEndOf="@id/welcome"
+        app:layout_constraintStart_toStartOf="@id/welcome"
+        app:layout_constraintTop_toBottomOf="@id/apptifier" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="27.8dp"
         android:fontFamily="@font/opensansitalic"
         android:gravity="center"
-        android:text="Một sản phẩm của nhóm [...]"
+        android:text="This quizz app project are created by group "
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apptifier" />
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="49dp"
         android:width="227dp"
         android:height="60dp"
-        android:backgroundTint="#40BAC7"
+        android:backgroundTint="#006793"
         android:fontFamily="@font/opensansextrabold"
         android:text="Start now"
         app:layout_constraintEnd_toEndOf="parent"
