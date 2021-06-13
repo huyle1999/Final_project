@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/opensansbold"
-        android:text="SCORE: 55/100"
+        android:text="SCORE:"
         android:textColor="#006996"
         android:textSize="14pt"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/score"/>
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/correct"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
         android:text="Correct Answer :"
@@ -61,7 +61,7 @@
         android:textColor="#1CC4B8"
         android:textSize="10pt"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"/>
+        app:layout_constraintTop_toBottomOf="@+id/correct"/>
 
     <ImageButton
         android:id="@+id/restart"

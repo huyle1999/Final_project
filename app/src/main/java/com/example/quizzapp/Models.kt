@@ -26,8 +26,9 @@ class JoinedFeed(
     val correct_answers: ArrayList<String>
 )
 class DoneFeed(
-        val qNumbers: String,
-        val qCorrectAnswers: String,
-        val qAttempted: String,
-        val qNegative: String
+    val qNumbers: String,
+    val qCorrectAnswers: String,
+    val qAttempted: String,
+    val qNegative: String,
+    val Score : String
 )

@@ -11,7 +11,6 @@ import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import com.google.gson.GsonBuilder
 import java.lang.Math.abs
-import kotlin.Result.*
 
 class Questions : AppCompatActivity() {
 
@@ -125,7 +124,8 @@ class Questions : AppCompatActivity() {
                         qNumbers = "${allJoined[0].questions.count()}",
                         qCorrectAnswers = "${isCorrect}",//5 or 6
                         qAttempted = "${10}",//question dont skip
-                        qNegative = "${abs(isFailed)}"//the number of wrong
+                        qNegative = "${abs(isFailed)}",//the number of wrong
+                        Score = "${10*isCorrect}"
                 )
 
                 donepop.adapter = DoneAdapter(this, info)//update the value
@@ -143,6 +143,7 @@ class Questions : AppCompatActivity() {
             val newAnswers = allJoined[0].answers[questionNr];
             setAnswers(newAnswers)
         }
+        fun multiply(x: Int, y: Int) = x * y
     }
 
     private fun setAnswers(qanswers: ArrayList<String>) {
