@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:paddingHorizontal="22dp"
     android:paddingVertical="44dp"
+    android:background="@drawable/WelcomePage"
     tools:context=".MainActivity">
 
     <TextView
@@ -27,7 +28,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/opensansbold"
         android:gravity="center"
-        android:text="KHTN"
+        android:text="K17-FETEL"
         android:textColor="#1CC4B8"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="@id/welcome"
@@ -39,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
-        android:src="@drawable/group_340"
+        android:src="@drawable/Logo"
         app:layout_constraintEnd_toEndOf="@id/welcome"
         app:layout_constraintStart_toStartOf="@id/welcome"
         app:layout_constraintTop_toBottomOf="@id/apptifier" />
@@ -51,7 +52,7 @@
         android:layout_marginTop="27.8dp"
         android:fontFamily="@font/opensansitalic"
         android:gravity="center"
-        android:text="This quizz app project are created by group "
+        android:text="Một sản phẩm của nhóm [ĐẶT TÊN NHÓM] "
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +65,7 @@
         android:layout_marginTop="49dp"
         android:width="227dp"
         android:height="60dp"
-        android:backgroundTint="#006793"
+        android:backgroundTint="#40BAC7"
         android:fontFamily="@font/opensansextrabold"
         android:text="Start now"
         app:layout_constraintEnd_toEndOf="parent"
