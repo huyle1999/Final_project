@@ -10,15 +10,11 @@ class Category : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category)
 
-        supportActionBar?.hide();
+        val startBtn : ImageButton = findViewById(R.id.startBtn);
+        val intent: Intent = Intent(this, Questions::class.java);
 
-        val startBtn :ImageButton =findViewById(R.id.startBtn);
-
-        startBtn.setOnClickListener {
-            val intent: Intent = Intent(this, Questions::class.java);
-            startActivity(intent)
+        startBtn.setOnClickListener{
+            startActivity(intent);
         }
     }
-
-
 }
