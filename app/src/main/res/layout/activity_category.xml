@@ -6,7 +6,7 @@
     android:id="@+id/body"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/CatePage"
+    android:background="@drawable/catepage"
     tools:context=".Category">
 
     <ImageView
@@ -87,13 +87,14 @@
         app:layout_constraintEnd_toStartOf="@id/imageView6"
         app:layout_constraintTop_toBottomOf="@id/imageView5" />
 
-    <ImageButton
+    <Button
         android:id="@+id/startBtn"
         android:layout_width="295dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/borderbtn"
-        android:src="@drawable/StartBtn"
+        android:fontFamily="@font/opensansextrabold"
+        android:backgroundTint="#40BAC7"
+        android:text="Start now"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
