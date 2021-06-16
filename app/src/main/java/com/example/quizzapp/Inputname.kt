@@ -3,6 +3,7 @@ package com.example.quizzapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 
@@ -12,7 +13,7 @@ class Inputname : AppCompatActivity() {
         setContentView(R.layout.activity_inputname)
         supportActionBar?.hide();
 
-        val btn = findViewById<ImageButton>(R.id.next_btn);
+        val btn = findViewById<Button>(R.id.next_btn);
         val text = findViewById<EditText>(R.id.editTextTextPersonName);
 
 
