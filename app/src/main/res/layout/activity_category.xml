@@ -87,17 +87,17 @@
         app:layout_constraintEnd_toStartOf="@id/imageView6"
         app:layout_constraintTop_toBottomOf="@id/imageView5" />
 
-    <Button
-        android:id="@+id/startBtn"
-        android:layout_width="295dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/opensansextrabold"
-        android:backgroundTint="#40BAC7"
-        android:text="Start now"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+<!--    <Button-->
+<!--        android:id="@+id/startBtn"-->
+<!--        android:layout_width="295dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:fontFamily="@font/opensansextrabold"-->
+<!--        android:backgroundTint="#40BAC7"-->
+<!--        android:text="Start now"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
