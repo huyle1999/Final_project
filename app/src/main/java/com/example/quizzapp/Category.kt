@@ -11,6 +11,7 @@ class Category : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category)
+        supportActionBar?.hide();
 
         val Btn1 : ImageView = findViewById(R.id.View5);
         val Btn2 : ImageView = findViewById(R.id.View6);
