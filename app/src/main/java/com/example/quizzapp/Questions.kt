@@ -36,11 +36,11 @@ class Questions : AppCompatActivity() {
 
         var endpoint: String ="init"
 
+//5 film 6 history 7 mussic
 
-
-        if (name1!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple";
-        if (name2!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple";
-        if (name3!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=14&difficulty=easy&type=multiple";
+        if (name1!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple";
+        if (name2!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple";
+        if (name3!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple";
         val questions: ArrayList<String> = ArrayList();
         val allanswers: ArrayList<ArrayList<String>> = ArrayList();
         val allcorrectanswer: ArrayList<String> = ArrayList();
