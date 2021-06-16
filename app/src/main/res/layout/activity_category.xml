@@ -57,7 +57,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/View5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="116dp"
@@ -68,24 +68,24 @@
         app:layout_constraintTop_toBottomOf="@id/textCover" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/View6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:src="@drawable/history"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@id/View5" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/View7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
         android:src="@drawable/music"
-        app:layout_constraintEnd_toStartOf="@id/imageView6"
-        app:layout_constraintTop_toBottomOf="@id/imageView5" />
+        app:layout_constraintEnd_toStartOf="@id/View6"
+        app:layout_constraintTop_toBottomOf="@id/View5" />
 
 <!--    <Button-->
 <!--        android:id="@+id/startBtn"-->
