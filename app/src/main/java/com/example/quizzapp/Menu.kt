@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.GridView
 import android.widget.ImageButton
+import android.widget.TextView
 
 
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,10 @@ class Menu : AppCompatActivity() {
 
         val Grid: GridView = findViewById<GridView>(R.id.GridView);
         Grid.adapter = Adapter(this, allItems);
+        val intent = intent
+        val name1 = intent.getStringExtra("name")
+        val txt = findViewById<TextView>(R.id.john)
+        txt.text = "Welcome to our quizzapp,"+" "+name1
 
         val nextBtn = findViewById<ImageButton>(R.id.next_btn);
         nextBtn.setOnClickListener {
