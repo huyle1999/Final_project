@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.GridView
+import android.widget.ImageButton
 
 
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +25,7 @@ class Menu : AppCompatActivity() {
         val Grid: GridView = findViewById<GridView>(R.id.GridView);
         Grid.adapter = Adapter(this, allItems);
 
-        val nextBtn = findViewById<Button>(R.id.next_btn);
+        val nextBtn = findViewById<ImageButton>(R.id.next_btn);
         nextBtn.setOnClickListener {
             val intent: Intent = Intent(this, Category::class.java);
             startActivity(intent)
