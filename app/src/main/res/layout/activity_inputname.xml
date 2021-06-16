@@ -1,40 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Inputname">
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Enter your name , bro"
-        android:inputType="textPersonName"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="230dp" />
+    android:layout_height="wrap_content"
+    android:background="@drawable/welcomepage"
+    >
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/dialog_input_box"
+       android:orientation="vertical"
+       android:layout_marginRight="16dp"
+       android:layout_marginLeft="16dp"
+       android:layout_marginTop="50dp">
+       <TextView
+           android:id="@+id/textView3"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="12dp"
+           android:textColor="@color/black"
+           android:textSize="16dp"
+           android:gravity="center"
+           android:background="@drawable/dialog_input_header"
+           android:text="Information"/>
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Please input your name"
+           android:textSize="16dp"
+           android:gravity="center"
+           android:layout_marginTop="16dp"
+           android:textColor="@color/black"
+           />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="What is your name ?"
-        android:textSize="34dp"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="90dp"
-        tools:ignore="MissingConstraints" />
+       <EditText
+           android:id="@+id/editTextTextPersonName"
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:layout_marginTop="16dp"
+           android:layout_marginBottom="10dp"
+           android:background="@drawable/custom_input"
+           android:textSize="14dp"
+           android:ems="10"
+           android:hint="Your Name"
+           android:inputType="textPersonName"
+           android:drawableStart="@drawable/ic_people"
+           android:drawablePadding="10dp"
+           />
 
-    <ImageButton
-        android:id="@+id/next_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="48dp"
-        android:background="#fff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/group_358" />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <Button
+               android:id="@+id/next_btn"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="14dp"
+               android:text="Next"
+               android:background="@drawable/dialog_next_button"/>
+       </LinearLayout>
+   </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
