@@ -25,7 +25,22 @@ class Questions : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
 
-        val endpoint: String = "https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=multiple";
+        val name1 = intent.getStringExtra("name1")
+        val name2 = intent.getStringExtra("name2")
+        val name3 = intent.getStringExtra("name3")
+//        var x:Int = 0
+//       if(name1 !=null) x=1;
+//        if(name2 !=null) x=2;
+//        if(name3 !=null) x=3;
+//        when(x)
+
+        var endpoint: String ="init"
+
+
+
+        if (name1!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple";
+        if (name2!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple";
+        if (name3!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=14&difficulty=easy&type=multiple";
         val questions: ArrayList<String> = ArrayList();
         val allanswers: ArrayList<ArrayList<String>> = ArrayList();
         val allcorrectanswer: ArrayList<String> = ArrayList();
