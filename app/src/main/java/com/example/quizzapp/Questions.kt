@@ -1,5 +1,6 @@
 package com.example.quizzapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -14,20 +15,21 @@ import java.lang.Math.abs
 
 class Questions : AppCompatActivity() {
 
+
     companion object{
         val allJoined: ArrayList<JoinedFeed> = ArrayList();//what is this ?
         var selectedAnswer: ArrayList<String> = ArrayList();
         var questionNr: Int = 0;
         var isCorrect: Int = 0;
         var isFailed: Int = 0;
+        var flag=0;
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
+      if(flag==1) reset()
+        val name1 = intent.getStringExtra("name")
 
-        val name1 = intent.getStringExtra("name1")
-        val name2 = intent.getStringExtra("name2")
-        val name3 = intent.getStringExtra("name3")
 //        var x:Int = 0
 //       if(name1 !=null) x=1;
 //        if(name2 !=null) x=2;
@@ -38,9 +40,9 @@ class Questions : AppCompatActivity() {
 
 //5 film 6 history 7 mussic
 
-        if (name1!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple";
-        if (name2!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple";
-        if (name3!= null) endpoint = "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple";
+        if (name1 == "a") endpoint = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple";
+        if (name1 == "b") endpoint = "https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple";
+        if (name1 == "c") endpoint = "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple";
         val questions: ArrayList<String> = ArrayList();
         val allanswers: ArrayList<ArrayList<String>> = ArrayList();
         val allcorrectanswer: ArrayList<String> = ArrayList();
@@ -63,7 +65,7 @@ class Questions : AppCompatActivity() {
                         val mainData: AllResults = gson.fromJson(data, AllResults::class.java)
                         for ((index, value) in mainData.results.withIndex()) {
 
-                            val mainFeed = mainData.results;
+                            val mainFeed = mainData.results;//nguyen day json
                             val question = mainFeed[index].question;
                             questions.add(question)
 
@@ -88,6 +90,8 @@ class Questions : AppCompatActivity() {
             )
         )
         startQuiz()
+        flag=1
+        //reset()
     }
 
     private fun startQuiz() {
@@ -97,6 +101,7 @@ class Questions : AppCompatActivity() {
         val donelayout: ConstraintLayout = findViewById(R.id.done);
         val quizlayout: ConstraintLayout = findViewById(R.id.quiz);
         val donepop: ListView = findViewById(R.id.done_pop);
+
 
         // Display Number
         var questionNum = questionNr;
@@ -135,15 +140,37 @@ class Questions : AppCompatActivity() {
                 quizlayout.visibility = View.GONE;
                 donelayout.visibility= View.VISIBLE
                 //when we reach to the last question,we should stop moving to next because it can crash
-                val info: DoneFeed = DoneFeed(
-                        qNumbers = "${allJoined[0].questions.count()}",
-                        qCorrectAnswers = "${isCorrect}",//5 or 6
-                        qAttempted = "${10}",//question dont skip
-                        qNegative = "${abs(isFailed)}",//the number of wrong
-                        Score = "${10*isCorrect}"
-                )
 
-                donepop.adapter = DoneAdapter(this, info)//update the value
+                val qNumbers = "${allJoined[0].questions.count()}"
+                val qCorrectAnswers = "${isCorrect}"//5 or 6
+                val qAttempted = "${10}"//question dont skip
+                val qNegative = "${abs(isFailed)}"//the number of wrong
+                val score = "${10*isCorrect}"
+
+                //val nextBtn = findViewById<ImageButton>(R.id.next_btn);
+                //nextBtn.setOnClickListener {
+                val intent = Intent(this,Score::class.java )
+
+
+
+
+                    intent.putExtra("qNumbers", qNumbers.toString());
+                    intent.putExtra("qCorrectAnswers", qCorrectAnswers.toString());
+                    intent.putExtra("qAttempted", qAttempted.toString());
+                    intent.putExtra("qNegative", qNegative.toString());
+                    intent.putExtra("Score", score.toString());
+
+
+
+                startActivity(intent);
+
+
+                //startService(intent)
+
+                //AppCompatActivity().finish();
+                //donepop.adapter = DoneAdapter(this, info)//update the value
+
+
             }else{
                 questionNum++;
                 questionNr++
@@ -154,10 +181,15 @@ class Questions : AppCompatActivity() {
             totalnum.text = "${questionNum.toString()}/${allJoined[0].questions.count()}"
             mainquestion.text = allJoined[0].questions[questionNr];
 
+
             //update answers
             val newAnswers = allJoined[0].answers[questionNr];
             setAnswers(newAnswers)
+
+
+
         }
+
         fun multiply(x: Int, y: Int) = x * y
     }
 
@@ -166,6 +198,14 @@ class Questions : AppCompatActivity() {
         for ((index, value) in qanswers.withIndex()) {
             answers.adapter = AnswerAdapter(this, qanswers)
         }
+    }
+    private fun reset()
+    {
+        allJoined.clear();
+        selectedAnswer.clear();
+        questionNr = 0;
+        isCorrect = 0;
+        isFailed = 0;
     }
 }
 
