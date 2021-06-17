@@ -1,5 +1,6 @@
 package com.example.quizzapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,6 +14,7 @@ import com.google.gson.GsonBuilder
 import java.lang.Math.abs
 
 class Questions : AppCompatActivity() {
+
 
     companion object{
         val allJoined: ArrayList<JoinedFeed> = ArrayList();//what is this ?
@@ -135,15 +137,35 @@ class Questions : AppCompatActivity() {
                 quizlayout.visibility = View.GONE;
                 donelayout.visibility= View.VISIBLE
                 //when we reach to the last question,we should stop moving to next because it can crash
-                val info: DoneFeed = DoneFeed(
-                        qNumbers = "${allJoined[0].questions.count()}",
-                        qCorrectAnswers = "${isCorrect}",//5 or 6
-                        qAttempted = "${10}",//question dont skip
-                        qNegative = "${abs(isFailed)}",//the number of wrong
-                        Score = "${10*isCorrect}"
-                )
 
-                donepop.adapter = DoneAdapter(this, info)//update the value
+                val qNumbers = "${allJoined[0].questions.count()}"
+                val qCorrectAnswers = "${isCorrect}"//5 or 6
+                val qAttempted = "${10}"//question dont skip
+                val qNegative = "${abs(isFailed)}"//the number of wrong
+                val score = "${10*isCorrect}"
+
+                //val nextBtn = findViewById<ImageButton>(R.id.next_btn);
+                //nextBtn.setOnClickListener {
+                val intent = Intent(this,Score::class.java )
+
+
+
+
+                    intent.putExtra("qNumbers", qNumbers.toString());
+                    intent.putExtra("qCorrectAnswers", qCorrectAnswers.toString());
+                    intent.putExtra("qAttempted", qAttempted.toString());
+                    intent.putExtra("qNegative", qNegative.toString());
+                    intent.putExtra("Score", score.toString());
+
+                    startActivity(intent);
+
+
+                //startService(intent)
+
+                //AppCompatActivity().finish();
+                //donepop.adapter = DoneAdapter(this, info)//update the value
+
+
             }else{
                 questionNum++;
                 questionNr++

@@ -20,6 +20,7 @@ class Category : AppCompatActivity() {
 
         Btn1.setOnClickListener{
             intent.putExtra("name1",Btn1.id.toString());
+
             startActivity(intent);
         }
         Btn2.setOnClickListener{
