@@ -29,6 +29,7 @@ class Score : AppCompatActivity() {
         val txt5 = findViewById<ImageButton>(R.id.restart)
         txt5.setOnClickListener{
             val intent = Intent(this,Category::class.java )
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
             startActivity(intent);
         }

@@ -19,16 +19,19 @@ class Category : AppCompatActivity() {
         val intent: Intent = Intent(this, Questions::class.java);
 
         Btn1.setOnClickListener{
-            intent.putExtra("name1",Btn1.id.toString());
+            intent.putExtra("name","a");
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
             startActivity(intent);
         }
         Btn2.setOnClickListener{
-            intent.putExtra("name2",Btn2.id.toString());
+            intent.putExtra("name","b");
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
         Btn3.setOnClickListener{
-            intent.putExtra("name3",Btn3.id.toString());
+            intent.putExtra("name","c");
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
     }
