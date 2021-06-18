@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:paddingHorizontal="22dp"
     android:paddingVertical="44dp"
+    android:background="@drawable/welcomepage"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,9 +15,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/opensansbold"
         android:gravity="center"
-        android:text="WELCOME TO"
+        android:text="NHÓM 2- DTVT"
         android:textColor="#006793"
-        android:textSize="40dp"
+        android:textSize="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,19 +28,19 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/opensansbold"
         android:gravity="center"
-        android:text="KHTN"
+        android:text="K17-FETEL"
         android:textColor="#1CC4B8"
-        android:textSize="40dp"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="@id/welcome"
         app:layout_constraintStart_toStartOf="@id/welcome"
         app:layout_constraintTop_toBottomOf="@id/welcome" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="273dp"
+        android:layout_height="230dp"
         android:layout_marginTop="27dp"
-        android:src="@drawable/group_340"
+        android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="@id/welcome"
         app:layout_constraintStart_toStartOf="@id/welcome"
         app:layout_constraintTop_toBottomOf="@id/apptifier" />
@@ -51,7 +52,7 @@
         android:layout_marginTop="27.8dp"
         android:fontFamily="@font/opensansitalic"
         android:gravity="center"
-        android:text="This quizz app project are created by group "
+        android:text="Một sản phẩm của nhóm 2 "
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,12 +62,12 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="9dp"
         android:width="227dp"
         android:height="60dp"
-        android:backgroundTint="#006793"
+        android:backgroundTint="#40BAC7"
         android:fontFamily="@font/opensansextrabold"
-        android:text="Start now"
+        android:text="BẮT ĐẦU"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView2" />
