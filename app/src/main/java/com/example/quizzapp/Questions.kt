@@ -47,11 +47,11 @@ class Questions : AppCompatActivity() {
 
 //5 film 6 history 7 mussic
 
-        if (name1 == "a") endpoint = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple";
-        if (name1 == "b") endpoint = "https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple";
-        if (name1 == "c") endpoint = "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple";
-        if (name1 == "d") endpoint = "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple";
-        if (name1 == "e") endpoint = "https://opentdb.com/api.php?amount=10&category=27&difficulty=easy&type=multiple";//vehicles
+        if (name1 == "a") endpoint = "https://pastebin.com/raw/8b7seqKd";//film
+        if (name1 == "b") endpoint = "https://pastebin.com/raw/MfrLZPGk";//history
+        if (name1 == "c") endpoint = "https://pastebin.com/raw/CDch3snx";//music
+        if (name1 == "d") endpoint = "https://pastebin.com/raw/89HuBdCX";//vehicles
+        if (name1 == "e") endpoint = "https://pastebin.com/raw/RTY36DDx";//animal
 
         val questions: ArrayList<String> = ArrayList();
         val allanswers: ArrayList<ArrayList<String>> = ArrayList();

@@ -10,7 +10,7 @@ class timetaken : AppCompatActivity() {
         setContentView(R.layout.activity_timetaken)
         supportActionBar?.hide();
         val txt3 = findViewById<TextView>(R.id.textView8)
-        txt3.text="Sorry we will update this feature soon"
+        txt3.text="Xin lỗi,chúng tôi sẽ cập nhập sau"
 
     }
 }
