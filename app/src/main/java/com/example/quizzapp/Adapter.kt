@@ -13,7 +13,7 @@ class Adapter(private val context:Context,
 private val AllItems: ArrayList<Items>):BaseAdapter() {
     override fun getView(p0: Int, view: View?, viewGroup: ViewGroup?): View {
         val layoutInflater: LayoutInflater = LayoutInflater.from(context);
-        val mainRow: View = layoutInflater.inflate(R.layout.itemlist, viewGroup, false);
+        val mainRow: View = layoutInflater.inflate(R.layout.itemlist, viewGroup, false);//chuyen doi xml thanh 1 view code de truy xuat
 
         val Text: TextView = mainRow.findViewById(R.id.stat_text);
         val Img: ImageView = mainRow.findViewById(R.id.stat_image);

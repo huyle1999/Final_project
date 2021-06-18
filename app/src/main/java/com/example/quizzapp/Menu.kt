@@ -2,10 +2,8 @@ package com.example.quizzapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.GridView
-import android.widget.ImageButton
-import android.widget.TextView
+import android.sax.StartElementListener
+import android.widget.*
 
 
 import androidx.appcompat.app.AppCompatActivity
@@ -25,12 +23,32 @@ class Menu : AppCompatActivity() {
 
         val Grid: GridView = findViewById<GridView>(R.id.GridView);
         Grid.adapter = Adapter(this, allItems);
+
+        Grid.setOnItemClickListener { adapterView, view, i, l ->
+            val check1 = allItems[i];
+            when(check1.name)
+            {
+                "Total Score"->
+                    startActivity(Intent(this,totalscore::class.java))
+                "Total Test"->
+                        startActivity(Intent(this,totaltest::class.java))
+                "Previous Score"->
+                    startActivity(Intent(this,previous::class.java))
+                "Time Taken"->
+                        startActivity(Intent(this,timetaken::class.java))
+
+
+
+            }
+        }
+
         val intent = intent
         val name1 = intent.getStringExtra("name")
         val txt = findViewById<TextView>(R.id.john)
         txt.text = "Welcome to our quizzapp,"+" "+name1
 
         val nextBtn = findViewById<ImageButton>(R.id.next_btn);
+
         nextBtn.setOnClickListener {
             val intent: Intent = Intent(this, Category::class.java);
             startActivity(intent)

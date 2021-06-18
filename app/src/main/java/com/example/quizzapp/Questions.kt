@@ -23,11 +23,18 @@ class Questions : AppCompatActivity() {
         var isCorrect: Int = 0;
         var isFailed: Int = 0;
         var flag=0;
+        var num =0;
+        //var sum=0;
+
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
       if(flag==1) reset()
+        val intent = intent
+
+        num++;
+        intent.putExtra("num",num.toString());
         val name1 = intent.getStringExtra("name")
 
 //        var x:Int = 0
@@ -95,6 +102,8 @@ class Questions : AppCompatActivity() {
         startQuiz()
         flag=1
         //reset()
+
+
     }
 
     private fun startQuiz() {
@@ -162,6 +171,8 @@ class Questions : AppCompatActivity() {
                     intent.putExtra("qAttempted", qAttempted.toString());
                     intent.putExtra("qNegative", qNegative.toString());
                     intent.putExtra("Score", score.toString());
+
+                intent.putExtra("score", score);
 
 
 

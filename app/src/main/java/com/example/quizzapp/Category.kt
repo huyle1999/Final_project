@@ -18,6 +18,14 @@ class Category : AppCompatActivity() {
         val Btn3 : ImageView = findViewById(R.id.View7);
         val Btn4 : ImageView = findViewById(R.id.View8);
         val Btn5 : ImageView = findViewById(R.id.View9);
+        val Btn6 : ImageView = findViewById(R.id.imageView4);
+        Btn6.setOnClickListener{
+
+            val intent: Intent = Intent(this, Inputname::class.java);
+
+            startActivity(intent);
+        }
+
 
         val intent: Intent = Intent(this, Questions::class.java);
 
