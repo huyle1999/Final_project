@@ -11,14 +11,13 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="17dp"
+        android:layout_height="15dp"
         android:layout_marginLeft="21dp"
         android:layout_marginTop="23dp"
         android:src="@drawable/backward_arrow"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/textCover"
@@ -60,10 +59,10 @@
         android:id="@+id/View5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/film"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textCover" />
 
@@ -72,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="36dp"
         android:src="@drawable/history"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/View5" />
@@ -87,7 +86,27 @@
         app:layout_constraintEnd_toStartOf="@id/View6"
         app:layout_constraintTop_toBottomOf="@id/View5" />
 
-<!--    <Button-->
+    <ImageView
+        android:id="@+id/View8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/music"
+        app:layout_constraintTop_toBottomOf="@id/View7"
+        app:layout_constraintEnd_toStartOf="@id/View6" />
+
+    <ImageView
+        android:id="@+id/View9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/View7"  />
+
+    <!--    <Button-->
 <!--        android:id="@+id/startBtn"-->
 <!--        android:layout_width="295dp"-->
 <!--        android:layout_height="wrap_content"-->

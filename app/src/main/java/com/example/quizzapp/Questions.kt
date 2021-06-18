@@ -43,6 +43,9 @@ class Questions : AppCompatActivity() {
         if (name1 == "a") endpoint = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple";
         if (name1 == "b") endpoint = "https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple";
         if (name1 == "c") endpoint = "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple";
+        if (name1 == "d") endpoint = "https://opentdb.com/api.php?amount=10&category=27&difficulty=easy&type=multiple";
+        if (name1 == "e") endpoint = "https://opentdb.com/api.php?amount=10&category=28&difficulty=easy&type=multiple";//vehicles
+
         val questions: ArrayList<String> = ArrayList();
         val allanswers: ArrayList<ArrayList<String>> = ArrayList();
         val allcorrectanswer: ArrayList<String> = ArrayList();
@@ -69,8 +72,8 @@ class Questions : AppCompatActivity() {
                             val question = mainFeed[index].question;
                             questions.add(question)
 
-                            val answers = mainFeed[index].incorrect_answers
-                            answers.add((0..3).random(), mainFeed[index].correct_answer);
+                            val answers = mainFeed[index].incorrect_answers//add wrong answer
+                            answers.add((0..3).random(), mainFeed[index].correct_answer);//3 wrong 1 right
                             allanswers.add(answers);
 
                             val canswers = mainFeed[index].correct_answer;

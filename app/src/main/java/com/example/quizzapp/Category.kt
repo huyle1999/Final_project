@@ -16,6 +16,9 @@ class Category : AppCompatActivity() {
         val Btn1 : ImageView = findViewById(R.id.View5);
         val Btn2 : ImageView = findViewById(R.id.View6);
         val Btn3 : ImageView = findViewById(R.id.View7);
+        val Btn4 : ImageView = findViewById(R.id.View8);
+        val Btn5 : ImageView = findViewById(R.id.View9);
+
         val intent: Intent = Intent(this, Questions::class.java);
 
         Btn1.setOnClickListener{
@@ -31,6 +34,16 @@ class Category : AppCompatActivity() {
         }
         Btn3.setOnClickListener{
             intent.putExtra("name","c");
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
+        Btn4.setOnClickListener{
+            intent.putExtra("name","d");
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
+        Btn5.setOnClickListener{
+            intent.putExtra("name","e");
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
