@@ -20,7 +20,8 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:padding="12dp"
-           android:textColor="@color/black"
+           android:fontFamily="@font/opensansbold"
+           android:textColor="@color/white"
            android:textSize="16dp"
            android:gravity="center"
            android:background="@drawable/dialog_input_header"
@@ -30,6 +31,7 @@
            android:layout_height="wrap_content"
            android:text="Please input your name"
            android:textSize="16dp"
+           android:fontFamily="@font/opensansbold"
            android:gravity="center"
            android:layout_marginTop="16dp"
            android:textColor="@color/black"
@@ -42,6 +44,7 @@
            android:layout_marginTop="16dp"
            android:layout_marginBottom="10dp"
            android:background="@drawable/custom_input"
+           android:fontFamily="@font/opensansbold"
            android:textSize="14dp"
            android:ems="10"
            android:hint="Your Name"
@@ -57,9 +60,11 @@
                android:id="@+id/next_btn"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:textSize="14dp"
+               android:fontFamily="@font/opensansbold"
                android:text="Next"
-               android:background="@drawable/dialog_next_button"/>
+               android:background="@drawable/dialog_next_button"
+               app:backgroundTint="@null"
+               />
        </LinearLayout>
    </LinearLayout>
 
