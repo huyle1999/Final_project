@@ -45,7 +45,7 @@ class Menu : AppCompatActivity() {
         val intent = intent
         val name1 = intent.getStringExtra("name")
         val txt = findViewById<TextView>(R.id.john)
-        txt.text = "Welcome to our quizzapp,"+" "+name1
+        txt.text = "Chào mừng đến với app của nhóm 2,"+" "+name1
 
         val nextBtn = findViewById<ImageButton>(R.id.next_btn);
 

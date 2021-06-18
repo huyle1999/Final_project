@@ -25,11 +25,11 @@
            android:textSize="16dp"
            android:gravity="center"
            android:background="@drawable/dialog_input_header"
-           android:text="Information"/>
+           android:text="THÔNG TIN"/>
        <TextView
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:text="Please input your name"
+           android:text="nhập tên bạn nào ?"
            android:textSize="16dp"
            android:fontFamily="@font/opensansbold"
            android:gravity="center"
@@ -61,7 +61,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:fontFamily="@font/opensansbold"
-               android:text="Next"
+               android:text="Tiếp"
                android:background="@drawable/dialog_next_button"
                app:backgroundTint="@null"
                />

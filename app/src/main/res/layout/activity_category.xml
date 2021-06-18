@@ -31,7 +31,7 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/opensansbold"
             android:layout_gravity="center"
-            android:text="WHICH TEST"
+            android:text="BẠN MUỐN TEST"
             android:textColor="#016A9A"
             android:textSize="34dp"
             />
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/opensansbold"
             android:layout_gravity="center"
-            android:text="DO YOU WANT ?"
+            android:text="CHỦ ĐỀ NÀO ?"
             android:textColor="#016A9A"
             android:textSize="34dp"
             />
