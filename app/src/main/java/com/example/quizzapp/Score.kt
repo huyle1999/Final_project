@@ -11,11 +11,14 @@ class Score : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_score)
 
+
         val qNumbers = intent.getStringExtra("qNumbers")
         val qCorrectAnswers = intent.getStringExtra("qCorrectAnswers")
         val qAttempted = intent.getStringExtra("qAttempted")
         val qNegative = intent.getStringExtra("qNegative")
         val Score = intent.getStringExtra("Score")
+
+
 
         //val txt1 = findViewById<TextView>(R.id.q_number)
         val txt1 = findViewById<TextView>(R.id.q_number)
@@ -27,9 +30,10 @@ class Score : AppCompatActivity() {
         val txt4 = findViewById<TextView>(R.id.wrong)
         txt4.text="Wrong Answers :"+qNegative
         val txt5 = findViewById<ImageButton>(R.id.restart)
+
         txt5.setOnClickListener{
             val intent = Intent(this,Category::class.java )
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+
 
             startActivity(intent);
         }
